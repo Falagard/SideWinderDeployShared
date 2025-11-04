@@ -1,6 +1,6 @@
-package deploy;
+package sidewinderdeploy.shared;
 
-import deploy.DeployModels;
+import sidewinderdeploy.shared.DeployModels;
 import hx.injection.Service;
 
 interface IProjectService extends Service {

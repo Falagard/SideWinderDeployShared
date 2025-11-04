@@ -1,4 +1,4 @@
-package deploy;
+package sidewinderdeploy.shared;
 
 import Date;
 
