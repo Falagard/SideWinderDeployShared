@@ -6,7 +6,7 @@ import hx.injection.Service;
 interface ITenantVariableValueService extends Service {
 	// Upsert (create or update) a tenant-specific variable value
 	@post("/api/projects/:projectId/variables/:variableId/tenants/:tenantId/value")
-	public function setTenantVariableValue(value:TenantProjectVariableValue):TenantProjectVariableValue;
+	public function setTenantVariableValue(projectId:Int, variableId:Int, tenantId:Int, value:TenantProjectVariableValue):TenantProjectVariableValue; // include path params
 
 	// Get the resolved override value (or null if none exists)
 	@get("/api/projects/:projectId/variables/:variableId/tenants/:tenantId/value")
