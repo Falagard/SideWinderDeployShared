@@ -7,7 +7,7 @@ interface IProjectVariableService extends Service {
 	@get("/api/projects/:projectId/variables")
 	public function listProjectVariables(projectId:Int):Array<ProjectVariable>;
 	@post("/api/projects/:projectId/variables") 
-	public function createProjectVariable(variable:ProjectVariable):ProjectVariable;
+	public function createProjectVariable(projectId:Int, variable:ProjectVariable):ProjectVariable;
 	@get("/api/variables/:id")
 	public function getProjectVariable(id:Int):Null<ProjectVariable>;
 	@put("/api/variables/:id") 
