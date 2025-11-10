@@ -8,11 +8,9 @@ interface IAuthService extends Service {
 	@post("/api/auth/register")
 	public function register(request:RegisterRequest):RegisterResponse;
 	
-	@post("/api/auth/login")
 	public function login(request:LoginRequest):LoginResponse;
-	
-	@post("/api/auth/logout")
-	public function logout():Bool;
+    
+    public function invalidateSession(token:String):Bool;
 	
 	@get("/api/auth/me")
 	public function getCurrentUser():Null<UserPublic>;
